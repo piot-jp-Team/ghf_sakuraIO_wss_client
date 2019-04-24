@@ -53,7 +53,9 @@ cronの場合、crontab -e
 
 
 ## 機能説明  
-skwstimeexpire.shは、wss通信ログをチェックし更新日付が10分以上遅れていれば、メールを送信し  
+##### skwstimeexpire.sh  
+wss通信ログをチェックし更新日付が10分以上遅れていれば、メールを送信し  
 skws_Continuouslyプロセスが消えていれば、skws_Contin.shを起動し  
 skws_Continuously.phpをバックグランドで起動します。  
-alertmail.shは、ghf_webapp用で、laravel notificationメール用のデータチェックトリガーで条件に合致しているデータがあるとメールする定期実行用のスクリプトです。  
+##### alertmail.sh  
+ghf_webapp用で、laravel notificationメール用のデータチェックトリガーで条件に合致しているデータがあるとメールする定期実行用のスクリプトです。  
