@@ -3,7 +3,7 @@
 node.jsでなくphpで作ってしまった。  
 wssセッションが切れると復帰するためのプロセス監視用シェルスクリプトを定期実行。   
 さくらＶＰＳ（centos7、php7、nginx）で動作。  
-ghf_webapp用アラートメールトリガーも含む。 
+ghf_webapp用アラートメールトリガーも含む。  
 sakura.ioモジュールとセンサー本体はhttps://github.com/piot-jp-Team/ghf_sensorhousing  
 
 ## ディレクトリ構成
