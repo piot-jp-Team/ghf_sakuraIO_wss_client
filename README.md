@@ -1,9 +1,10 @@
 # ghf_sakuraIO_wss_client
 ## 概要：phpのratchet/pawlを使ってsakura.ioのwebsocket clientとして動作する。  
-プロセス監視用シェルスクリプトを定期実行。   
-ghf_webapp用アラートメールトリガーも含む。   
-さくらＶＰＳ（centos7、php7、nginx）で動作。  
 node.jsでなくphpで作ってしまった。  
+wssセッションが切れると復帰するためのプロセス監視用シェルスクリプトを定期実行。   
+さくらＶＰＳ（centos7、php7、nginx）で動作。  
+ghf_webapp用アラートメールトリガーも含む。 
+
 ## ディレクトリ構成
 
 + alertmail.sh          アラートメール用スクリプトghf_webappのアラートメールトリガー用  
