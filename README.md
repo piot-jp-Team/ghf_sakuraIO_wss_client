@@ -31,7 +31,7 @@ ghf_webapp用アラートメールトリガーも含む。
 ##### ディレクトリ変更/xxxx/yyyを配置するディテクトリに変更してください  
 skwstimeexpire.sh  3行目    FILETIME=`date +"%y%m%d%H%M" -r /xxxx/yyy/sakura_wss/log_Continuously.txt`  
 skwstimeexpire.sh 12行目    /xxxx/yyy/skws_Contin.sh  
-alertmail.sh       3行目    cd /xxxx/yyy/laravel_chart_dir  ghf_webappの配置先です。  
+alertmail.sh       3行目    cd /xxxx/yyy/ghf_webapp    ghf_webappの配置先です。  
 skws_Contin.sh     3行目    nohup bash -c "php /xxxx/yyy/sakura_wss/skws_Continuously.php >> /xxxx/yyy/sakura_wss/log_Continuously.txt" > /xxxx/yyy/nohupresult.log &  
 
 ##### 接続先変更  
