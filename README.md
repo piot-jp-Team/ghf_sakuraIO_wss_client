@@ -5,8 +5,6 @@ ghf_webapp用アラートメールトリガーも含む。
 さくらＶＰＳ（centos7、php7、nginx）で動作。  
 node.jsでなくphpで作ってしまった。  
 ## ディレクトリ構成
-　　　以下の説明は、/xxxx/yyy の配下に設置するものとします  
---------ディレクトリ構成------------------------------  
 
 + alertmail.sh          アラートメール用スクリプトghf_webappのアラートメールトリガー用  
 + alertmaillog.txt      上記ログ  
@@ -30,7 +28,7 @@ node.jsでなくphpで作ってしまった。
 #### 各設定情報変更  
 ##### ディレクトリ変更/xxxx/yyyを配置するディテクトリに変更してください  
 skwstimeexpire.sh  3行目    FILETIME=`date +"%y%m%d%H%M" -r /xxxx/yyy/sakura_wss/log_Continuously.txt`  
-skwstimeexpire.sh  6行目    メール送信先test@test.com　を変更
+skwstimeexpire.sh  6行目    メール送信先test@test.com　を変更  
 skwstimeexpire.sh 12行目    /xxxx/yyy/skws_Contin.sh  
 alertmail.sh       3行目    cd /xxxx/yyy/ghf_webapp    ghf_webappの配置先です。  
 skws_Contin.sh     3行目    nohup bash -c "php /xxxx/yyy/sakura_wss/skws_Continuously.php >> /xxxx/yyy/sakura_wss/log_Continuously.txt" > /xxxx/yyy/nohupresult.log &  
