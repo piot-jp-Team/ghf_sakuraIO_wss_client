@@ -1,6 +1,7 @@
 # ghf_sakuraIO_wss_client
 ## 概要：phpのratchet/pawlを使ってsakura.ioのwebsocket clientとして動作する。  
 node.jsでなくphpで作ってしまった。sakura.ioからデータを受け取ってmySqlに格納。  
+https://github.com/piot-jp-Team/ghf_webapp このsakura.io連携部分です。  　　
 wssセッションが切れると復帰するためのプロセス監視用シェルスクリプトを定期実行。   
 さくらＶＰＳ（centos7、php7、nginx）で動作。  
 ghf_webapp用アラートメールトリガーも含む。  
