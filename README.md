@@ -1,14 +1,14 @@
 # ghf_sakuraIO_wss_client
 ## 概要：phpのratchet/pawlを使ってsakura.ioのwebsocket clientとして動作する。  
-　　　プロセス監視用シェルスクリプトを定期実行。  
-　　　ghf_webapp用アラートメールトリガーも含む。   
-      さくらＶＰＳ（centos7、php7、nginx）で動作。　
+プロセス監視用シェルスクリプトを定期実行。  
+ghf_webapp用アラートメールトリガーも含む。   
+さくらＶＰＳ（centos7、php7、nginx）で動作。　
 
 ## ディレクトリ構成
 　　　以下の説明は、/xxxx/yyy の配下に設置するものとします  
 --------ディレクトリ構成------------------------------  
 
-+ alertmail.sh          アラートメール用スクリプトpiot_webappのアラートメールトリガー用  
++ alertmail.sh          アラートメール用スクリプトghf_webappのアラートメールトリガー用  
 + alertmaillog.txt      上記ログ  
 + skwstimeexpire.sh     wssプロセスの監視  
 + keepalive.txt         sakura.ioからのkeepaliveメッセージ格納用。sakura.ioは定期的に送信してくるの保証はしていないとのこと（セミナー時回答）。  
@@ -31,7 +31,7 @@
 ##### ディレクトリ変更/xxxx/yyyを配置するディテクトリに変更してください  
 skwstimeexpire.sh  3行目    FILETIME=`date +"%y%m%d%H%M" -r /xxxx/yyy/sakura_wss/log_Continuously.txt`  
 skwstimeexpire.sh 12行目    /xxxx/yyy/skws_Contin.sh  
-alertmail.sh       3行目    cd /xxxx/yyy/laravel_chart_dir  piot_webappの配置先です。  
+alertmail.sh       3行目    cd /xxxx/yyy/laravel_chart_dir  ghf_webappの配置先です。  
 skws_Contin.sh     3行目    nohup bash -c "php /xxxx/yyy/sakura_wss/skws_Continuously.php >> /xxxx/yyy/sakura_wss/log_Continuously.txt" > /xxxx/yyy/nohupresult.log &  
 
 ##### 接続先変更  
