@@ -7,20 +7,25 @@ ghf_webapp用アラートメールトリガーも含む。
 
 ## ディレクトリ構成
 
-+ alertmail.sh          (アラートメール用スクリプトghf_webappのアラートメールトリガー用)  
-+ alertmaillog.txt      (上記ログ)  
-+ skwstimeexpire.sh     (wssプロセスの監視)  
-+ keepalive.txt         (sakura.ioからのkeepaliveメッセージ格納用。sakura.ioは定期的に送信してくるの保証はしていないとのこと（セミナー時回答）。)  
-+ skws_Contin.sh        (skwstimeexpire.shのwssプロセス監視で反応がなくなったときのwssスクリプト本体起動用。)  
-- sakura_wss  
-	+ log_Continuously.txt    (wssログ（たまに手動でローテーションする必要がある）)  
-	+ skws_Continuously.php   (wssスクリプト本体)  
-	+ composer.json  
-	+ composer.lock        (以下「composer install」実行後自動生成)  
-	- vendor  
-		+ aaaa  
-		+ bbbb  
-		- cccc  
+```
+
+├── alertmail.sh         アラートメール用スクリプトghf_webappのアラートメールトリガー用 
+├── alertmaillog.txt     上記ログ 
+├── keepalive.txt        sakura.ioからのkeepaliveメッセージ格納用。sakura.ioは定期的に送信してくるの保証はしていないとのこと（セミナー時回答）。
+├── sakura_wss
+│   ├── composer.json
+│   ├── log_Continuously.txt   wssログ（たまに手動でローテーションする必要がある）
+│   ├── skws_Continuously.php  wssスクリプト本体  
+│   ├── composer.lock         「composer install」実行後生成  
+│   └── vendor                「composer install」実行後生成   
+│        ├── aaaa
+│        ├── bbb
+│        └── ccccc
+├── skws_Contin.sh              skwstimeexpire.shのwssプロセス監視で反応がなくなったときのwssスクリプト本体起動用。
+├── skwstimeexpire.sh           wssプロセスの監視
+└── wssfileexplog.txt           上記wssプロセス監視で反応がなくなったときのログ
+
+```
 
 ## インストール  
 
