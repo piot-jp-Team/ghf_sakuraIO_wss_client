@@ -1,0 +1,6 @@
+sent mail 1901171413 1901171415
+wss stopped
+Server is dead, restarting...
+sent mail 1903141416 1903141430
+wss stopped
+Server is dead, restarting...
